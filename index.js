@@ -1,8 +1,8 @@
 // CAMARA, Joenzsen Jonner H.
 // CMSC 100 - U2L
 
-const pass1 = "jonner55"
-const pass2 = "jonner55"
+const pass1 = "pass1"
+const pass2 = "pass1"
 const username = "John"
 
 // This function checkes if the 2 passwords matches
@@ -130,6 +130,9 @@ function toObject(name, pass1, pass2) {
         return person;
     } else if (pass1.length < 8 && passTest == false) {
         console.log("Insufficient Number of Strings!");
+        return false;
+    } else if (pass1 != pass2) {
+        console.log("Wrong Password!");
         return false;
     } else if ((testStr1 === pass1 || testStr2 === pass1) && passTest == false) {
         console.log("Invalid Password!");
